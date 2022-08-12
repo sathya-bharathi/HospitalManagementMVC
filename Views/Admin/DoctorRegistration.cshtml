@@ -1,0 +1,132 @@
+﻿@model HospitalManagementMVC.Models.DoctorRegistration
+
+@{
+    ViewData["Title"] = "DoctorRegistration";
+}
+<style>
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+</style>
+<section class="h-100 bg-tarnsparent">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-registration my-4">
+                    <div class="row g-0">
+                        <div class="col-xl-6 d-none d-xl-block">
+                              <img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=2000"
+                                alt="Sample photo" class="img-fluid"
+                                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase">Doctor registration<hr /></h3>
+                                        <form asp-action="DoctorRegistration">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <label asp-for="DoctorId" class="control-label"></label>
+                                                        <input asp-for="DoctorId" class="form-control" />
+                                                        <span asp-validation-for="DoctorId" class="text-danger"></span>
+                                                    </div></div>
+                                                    <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <label asp-for="DoctorName" class="control-label"></label>
+                                                        <input asp-for="DoctorName" class="form-control" />
+                                                        <span asp-validation-for="DoctorName" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-4">
+                                                        <div class="form-outline">
+                                                                <label asp-for="Password" class="control-label"></label>
+                                                                <input asp-for="Password"type="password" class="form-control" />
+                                                                <span asp-validation-for="Password" class="text-danger"></span>
+                                                            </div></div>
+                                                    <div class="col-md-6 mb-4">
+                                                             <div class="form-outline">
+                                                                <label asp-for="ConfirmPassword" class="control-label"></label>
+                                                                <input asp-for="ConfirmPassword" type="password"class="form-control" />
+                                                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                                           </div> </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-4">
+                                                        <div class="form-outline">
+                                                          <label asp-for="SpecializationId" class="control-label"></label>
+                                                          <select asp-for="SpecializationId" class ="form-control" asp-items="ViewBag.SpecializationId"></select>
+                                                    </div> </div>
+                                                    <div class="col-md-6 mb-4">
+                                                           <div class="form-outline">
+                                                            <label asp-for="SpecializationName" class="control-label"></label>
+                                                            <select asp-for="SpecializationName" class ="form-control" asp-items="ViewBag.SpecializationName"></select>
+                                                     </div></div>
+                                                </div>
+                                                 <div class="row">
+                                                     <div class="col-md-6 mb-4">
+                                                        <div class="form-outline">
+                                                            <label asp-for="PhoneNumber" class="control-label"></label>
+                                                            <input asp-for="PhoneNumber" class="form-control" />
+                                                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                                        </div></div>
+                                                        <div class="col-md-6 mb-4">
+                                                        <div class="form-outline">
+                                                            <label asp-for="Address" class="control-label"></label>
+                                                            <input asp-for="Address" class="form-control" />
+                                                            <span asp-validation-for="Address" class="text-danger"></span>
+                                                        </div></div>
+                                                   </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4">
+                                                                <div class="form-outline">
+                                                            <label asp-for="Qualification" class="control-label"></label>
+                                                            <input asp-for="Qualification" class="form-control" />
+                                                            <span asp-validation-for="Qualification" class="text-danger"></span>
+                                                        </div></div>
+                                                        <div class="col-md-6 mb-4">
+                                                        <div class="form-outline">
+                                                            <label asp-for="Position" class="control-label"></label>
+                                                            <input asp-for="Position" class="form-control" />
+                                                            <span asp-validation-for="Position" class="text-danger"></span>
+                                                        </div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4">
+                                                            <div  class="form-outline">
+                                                                <label asp-for="StartTime" class="control-label"></label>
+                                                                <input asp-for="StartTime" class="form-control" />
+                                                                <span asp-validation-for="StartTime" class="text-danger"></span>
+                                                            </div></div>
+                                                            <div class="col-md-6 mb-4">
+                                                            <div  class="form-outline">
+                                                                <label asp-for="EndTime" class="control-label"></label>
+                                                                <input asp-for="EndTime" class="form-control" />
+                                                                <span asp-validation-for="EndTime" class="text-danger"></span>
+                                                            </div></div>
+                                                    </div>
+                                            <div class="form-group">
+                                                <input type="submit" value="Register" class="btn btn-warning btn-lg ms-2" />
+                                            </div>
+                                        </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

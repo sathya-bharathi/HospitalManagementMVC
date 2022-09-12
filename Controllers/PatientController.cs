@@ -108,10 +108,10 @@ namespace HospitalManagementMVC.Controllers
                     _context.SaveChanges();
 
 
-                    #region EMAIL
-                    var senderEmail = new MailAddress("librarymanagement13@gmail.com", "Admin-Grace Hospitals");
-                    var receiverEmail = new MailAddress(a.PatientId, "Receiver");
-                    var password = "kigksgbmzemtqrax";
+                #region EMAIL
+                var senderEmail = new MailAddress("hospitalgrace1@gmail.com", "Admin-Grace Hospitals");
+                var receiverEmail = new MailAddress(a.PatientId, "Receiver");
+                    var password = "dennxqcxrdmtoqeg";
                     var sub = " Appointment Details ";
                     var body = " Hello " + a.PatientName + "!  Your Appointment is confirmed.                 The Appointment Details are: " + "                           " +
                         "Appointment Id: " + a.AppointmentId + "                                               Appointment Date: " + a.AppointmentDate

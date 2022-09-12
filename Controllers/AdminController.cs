@@ -37,9 +37,9 @@ namespace HospitalManagementMVC.Controllers
             _context.DoctorRegistrations.Add(obj);
             _context.SaveChanges();
 
-            var senderEmail = new MailAddress("librarymanagement13@gmail.com", "Sathya");
+            var senderEmail = new MailAddress("hospitalgrace1@gmail.com", "Admin-Grace Hospitals");
             var receiverEmail = new MailAddress(obj.DoctorId, "Receiver");
-            var password = "kigksgbmzemtqrax";
+            var password = "dennxqcxrdmtoqeg";
             var sub = "Hello" + obj.DoctorName + "Request Quote";
             var body = "Hello" + obj.DoctorName + " Your User Id is " + obj.DoctorId + " Your Password is " + obj.Password + " Use these Credentials to Login";
 

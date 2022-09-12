@@ -11,6 +11,7 @@ namespace HospitalManagementMVC.Models
         [DataType(DataType.Date)]
         //[Compare("DateTime.Today",ErrorMessage ="Enter a Valid Date.")]
         public DateTime? AppointmentDate { get; set; }
+        [Required]
         public string? AppointmentTime { get; set; }
         public string? DoctorId { get; set; }
         [NotMapped]

@@ -64,6 +64,7 @@ namespace HospitalManagementMVC.Controllers
             if (result != null)
             {
                 HttpContext.Session.SetString("AdminId", result.AdminId);
+                HttpContext.Session.SetString("Name", result.Name);
                 return RedirectToAction("Index", "Admin");
             }
             else
@@ -117,6 +118,7 @@ namespace HospitalManagementMVC.Controllers
             if (result != null)
             {
                 HttpContext.Session.SetString("DoctorId", result.DoctorId);
+                HttpContext.Session.SetString("DcotorName", result.DoctorName);
                 return RedirectToAction("Index", "Doctor");
             }
             else
